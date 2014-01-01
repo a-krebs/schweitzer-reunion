@@ -1,10 +1,33 @@
-*.log
-*.pot
-*.pyc
-local_settings.py
-
-# Virtualenv stuff
+# Eclipse
+n virtual environment #
+##############################
 bin
 include
 lib
 local
+
+# Django #
+##########
+*.py[co]
+*.pot
+*.db
+*.egg
+*.egg-info
+*.coverage
+*.log
+*.swp
+*~
+local_settings.py
+
+# Sass #
+########
+
+.sass-cache
+
+# Eclipse Metadata #
+####################
+.metadata/
+.settings/
+.project
+.pydevproject
+.metadata
