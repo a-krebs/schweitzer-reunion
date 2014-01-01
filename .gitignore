@@ -1,6 +1,5 @@
-# Eclipse
-n virtual environment #
-##############################
+# Virtial Enviroment #
+######################
 bin
 include
 lib
@@ -18,10 +17,10 @@ local
 *.swp
 *~
 local_settings.py
+*.sqlite3
 
 # Sass #
 ########
-
 .sass-cache
 
 # Eclipse Metadata #
