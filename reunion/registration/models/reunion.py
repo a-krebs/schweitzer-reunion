@@ -9,3 +9,6 @@ class Reunion(models.Model):
     start = models.DateTimeField()
     end = models.DateTimeField()
     location = models.ForeignKey(Location, related_name='reunions')
+
+    class Meta:
+        app_label = 'registration'
