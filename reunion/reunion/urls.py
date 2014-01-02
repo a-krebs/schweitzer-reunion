@@ -1,12 +1,11 @@
 from django.conf.urls import patterns, include, url
-
 from django.contrib import admin
+
+from registration import urls as registration_urls
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'reunion.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^registration/api/', include(registration_urls, namespace='registration'))
 )
