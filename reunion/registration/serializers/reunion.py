@@ -1,4 +1,4 @@
-from registration.models.reunion import Reunion
+from registration.models import Reunion
 from rest_framework import serializers
 
 
