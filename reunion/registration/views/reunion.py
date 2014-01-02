@@ -10,6 +10,6 @@ class ReunionList(generics.ListCreateAPIView):
     """
     queryset = Reunion.objects.all()
     serializer_class = ReunionSerializer
-    
+
     def __init__(self, *args, **kwargs):
         super(ReunionList, self).__init__(*args, **kwargs)
