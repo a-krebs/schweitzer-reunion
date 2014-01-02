@@ -19,13 +19,9 @@
 		.wrapper
 			.registration{:style => "border: 1px solid; width: 30%;"}
 				.members
-					.fname
-						First Name 
-						%input{:id => "fname",:type => "text"}
-					.lname
-						Last Name 
-						%input{:id => "fname",:type => "text"}
-					%button{:id => "addmore"}Add another family member
+					.memberList
+						
+					%input#addmore{:type => "button", :value => "Add another family member"}
 				.arrival
 					When will you arrive at the reunion
 					%select
@@ -38,5 +34,14 @@
 						%option{:value => "friday"} Friday
 						%option{:value => "saturday"} Saturday
 						%option{:value => "sunday", :selected => "true"} Sunday
+				%input#submit{:type => "button", :value => "Register"}
+		%script{:type => "text/template", :id => "member-template"}
+			.member
+				.fname
+					First Name 
+					%input.fnameInput{:type => "text"}
+				.lname
+					Last Name 
+					%input.lnameInput{:type => "text"}
 
 

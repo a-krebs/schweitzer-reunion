@@ -15,15 +15,8 @@
     <div class='wrapper'>
       <div class='registration' style='border: 1px solid; width: 30%;'>
         <div class='members'>
-          <div class='fname'>
-            First Name
-            <input id='fname' type='text'>
-          </div>
-          <div class='lname'>
-            Last Name
-            <input id='fname' type='text'>
-          </div>
-          <button id='addmore'>Add another family member</button>
+          <div class='memberList'></div>
+          <input id='addmore' type='button' value='Add another family member'>
         </div>
         <div class='arrival'>
           When will you arrive at the reunion
@@ -41,7 +34,20 @@
             <option selected='true' value='sunday'>Sunday</option>
           </select>
         </div>
+        <input id='submit' type='button' value='Register'>
       </div>
     </div>
+    <script id='member-template' type='text/template'>
+      <div class='member'>
+        <div class='fname'>
+          First Name
+          <input class='fnameInput' type='text'>
+        </div>
+        <div class='lname'>
+          Last Name
+          <input class='lnameInput' type='text'>
+        </div>
+      </div>
+    </script>
   </body>
 </html>
