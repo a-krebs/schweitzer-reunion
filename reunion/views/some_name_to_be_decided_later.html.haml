@@ -1,15 +1,42 @@
 %html
 	%head
+		/ %script{:type => "text/javascript",
+		/         :src  => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+		/ %script{:type => "text/javascript",
+		/         :src  => "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"}
 		%script{:type => "text/javascript",
-		        :src  => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+		        :src  => "../scripts/external/jquery-1.10.2.js"}
 		%script{:type => "text/javascript",
-		        :src  => "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"}
+		        :src  => "../scripts/external/jquery-ui-1.10.3/ui/jquery-ui.js"}
 		%script{:type => "text/javascript",
-		        :src  => "../scripts/lib/backbone.js"}
+		        :src  => "../scripts/external/underscore.js"}
 		%script{:type => "text/javascript",
-		        :src  => "../scripts/lib/underscore.js"}
+		        :src  => "../scripts/external/backbone.js"}
 		%script{:type => "text/javascript",
 		        :src  => "../scripts/some_name_to_be_decided_later.js"}         
 	%body
+		.navbar
 		.wrapper
-			stuff goes here
+			.registration{:style => "border: 1px solid; width: 30%;"}
+				.members
+					.fname
+						First Name 
+						%input{:id => "fname",:type => "text"}
+					.lname
+						Last Name 
+						%input{:id => "fname",:type => "text"}
+					%button{:id => "addmore"}Add another family member
+				.arrival
+					When will you arrive at the reunion
+					%select
+						%option{:value => "friday", :selected => "true"} Friday
+						%option{:value => "saturday"} Saturday
+						%option{:value => "sunday"} Sunday
+				.departure
+					When will you be leaving the reunion
+					%select
+						%option{:value => "friday"} Friday
+						%option{:value => "saturday"} Saturday
+						%option{:value => "sunday", :selected => "true"} Sunday
+
+

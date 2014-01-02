@@ -1,14 +1,47 @@
 <html>
   <head>
-    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' type='text/javascript'></script>
-    <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js' type='text/javascript'></script>
-    <script src='../scripts/lib/backbone.js' type='text/javascript'></script>
-    <script src='../scripts/lib/underscore.js' type='text/javascript'></script>
+    <!-- %script{:type => "text/javascript", -->
+    <!-- :src  => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"} -->
+    <!-- %script{:type => "text/javascript", -->
+    <!-- :src  => "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"} -->
+    <script src='../scripts/external/jquery-1.10.2.js' type='text/javascript'></script>
+    <script src='../scripts/external/jquery-ui-1.10.3/ui/jquery-ui.js' type='text/javascript'></script>
+    <script src='../scripts/external/underscore.js' type='text/javascript'></script>
+    <script src='../scripts/external/backbone.js' type='text/javascript'></script>
     <script src='../scripts/some_name_to_be_decided_later.js' type='text/javascript'></script>
   </head>
   <body>
+    <div class='navbar'></div>
     <div class='wrapper'>
-      stuff goes here
+      <div class='registration' style='border: 1px solid; width: 30%;'>
+        <div class='members'>
+          <div class='fname'>
+            First Name
+            <input id='fname' type='text'>
+          </div>
+          <div class='lname'>
+            Last Name
+            <input id='fname' type='text'>
+          </div>
+          <button id='addmore'>Add another family member</button>
+        </div>
+        <div class='arrival'>
+          When will you arrive at the reunion
+          <select>
+            <option selected='true' value='friday'>Friday</option>
+            <option value='saturday'>Saturday</option>
+            <option value='sunday'>Sunday</option>
+          </select>
+        </div>
+        <div class='departure'>
+          When will you be leaving the reunion
+          <select>
+            <option value='friday'>Friday</option>
+            <option value='saturday'>Saturday</option>
+            <option selected='true' value='sunday'>Sunday</option>
+          </select>
+        </div>
+      </div>
     </div>
   </body>
 </html>
