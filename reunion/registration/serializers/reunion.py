@@ -8,6 +8,6 @@ class ReunionSerializer(serializers.ModelSerializer):
     """
     def __init__(self, *args, **kwargs):
         super(ReunionSerializer, self).__init__(*args, **kwargs)
-    
+
     class Meta:
         model = Reunion
