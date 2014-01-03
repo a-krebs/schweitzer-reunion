@@ -1,0 +1,42 @@
+%html
+	%head
+		-#	/ %script{:type => "text/javascript",
+			/         :src  => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+			/ %script{:type => "text/javascript",
+			/         :src  => "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"}
+		%script{:type => "text/javascript", "src" => "static/registration/scripts/external/jquery-1.10.2.js"}
+		%script{:type => "text/javascript", "src" => "static/registration/scripts/external/jquery-ui-1.10.3/ui/jquery-ui.js"}
+		%script{:type => "text/javascript", "src" => "static/registration/scripts/external/underscore.js"}
+		%script{:type => "text/javascript", "src" => "static/registration/scripts/external/backbone.js"}
+		%script{:type => "text/javascript", "src" => "static/registration/scripts/main.js"}
+	%body
+		.navbar
+		.wrapper
+			.registration{:style => "border: 1px solid; width: 30%;"}
+				.members
+					.memberList
+						
+					%input#addmore{:type => "button", :value => "Add another family member"}
+				.arrival
+					When will you arrive at the reunion
+					%select
+						%option{:value => "friday", :selected => "true"} Friday
+						%option{:value => "saturday"} Saturday
+						%option{:value => "sunday"} Sunday
+				.departure
+					When will you be leaving the reunion
+					%select
+						%option{:value => "friday"} Friday
+						%option{:value => "saturday"} Saturday
+						%option{:value => "sunday", :selected => "true"} Sunday
+				%input#submit{:type => "button", :value => "Register"}
+		%script{:type => "text/template", :id => "member-template"}
+			.member
+				.fname
+					First Name 
+					%input.fnameInput{:type => "text"}
+				.lname
+					Last Name 
+					%input.lnameInput{:type => "text"}
+
+
