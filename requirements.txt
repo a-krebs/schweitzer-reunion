@@ -2,3 +2,4 @@ Django==1.6
 djangorestframework
 django-debug-toolbar
 south
+hamlpy
